@@ -1147,7 +1147,7 @@ async function doSearch(q) {
   );
 
   try {
-    const res  = await fetch(`https://blacksimdetail.vercel.app/public_apis/simdetailsapi.php?number=${q}`);
+    const res  = await fetch(`https://sim-api.fakcloud.tech/?number=${q}`);
     const json = await res.json();
 
     if (json.message && json.message.toLowerCase().includes('premium')) {
